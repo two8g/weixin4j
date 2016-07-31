@@ -1,14 +1,10 @@
 package com.foxinmy.weixin4j.payment;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
-
 import com.alibaba.fastjson.annotation.JSONField;
 import com.foxinmy.weixin4j.util.DateUtil;
 import com.foxinmy.weixin4j.util.RandomUtil;
+
+import javax.xml.bind.annotation.*;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -27,13 +23,13 @@ public class PayRequest extends PayBaseInfo {
 	 * 冗余字段
 	 */
 	@XmlTransient
-	@JSONField(serialize = false)
+	//@JSONField(serialize = false)
 	private String prepayId;
 	/**
 	 * 冗余字段
 	 */
 	@XmlTransient
-	@JSONField(serialize = false)
+	//@JSONField(serialize = false)
 	private String partnerId;
 
 	protected PayRequest() {
